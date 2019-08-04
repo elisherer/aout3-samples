@@ -1,5 +1,5 @@
 //our production code (Suite Under Test - SUT)
-let NumberParser2 = require('./number-parser2');
+const NumberParser2 = require('./number-parser2');
 
 /**
  * A Test helper function for a simple assertion
@@ -34,11 +34,11 @@ const check = (name,implementation) =>{
  * To run: "node ch1/custom-test-phase2.js
  */
 check("wasSumCalled by Default is False", () => {
-    let np = new NumberParser2();
+    const np = new NumberParser2();
     assertEquals(false, np.wasSumCalled());
 });
 check("wasSumCalled after summing is true", () => {
-    let np = new NumberParser2();
+    const np = new NumberParser2();
     np.sum("1,2");
     assertEquals(true,np.wasSumCalled());
 });
